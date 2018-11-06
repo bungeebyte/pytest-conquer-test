@@ -1,0 +1,16 @@
+sudo: false
+
+language: python
+python:
+  - "3.6"
+
+env:
+  global:
+    - MTGF_API_KEY=A5418A1E4255D2D45831EF2DE95F4
+    - MTGF_API_URL=https://equilibrium-dot-maketestsfaster.appspot.com
+
+install:
+  - pip install tox
+
+script:
+  - tox
