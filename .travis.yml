@@ -1,0 +1,17 @@
+sudo: false
+
+language: python
+python:
+  - "3.6"
+
+matrix:
+  include:
+    - env: WORKER=0
+    - env: WORKER=1
+    - env: WORKER=2
+
+install:
+  - pip install tox
+
+script:
+  - tox -- --conquer
